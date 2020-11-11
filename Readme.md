@@ -14,6 +14,7 @@ Get a copy of the code:
 ```
 cd ~
 git clone https://github.com/oxplot/terraform-credentials-gpg
+cd terraform-credentials-gpg
 ```
 
 Copy or link to `terraform-credentials-gpg` in your terraform plugins
