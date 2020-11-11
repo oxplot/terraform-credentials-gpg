@@ -22,7 +22,7 @@ directory:
 
 ```
 cp terraform-credentials-gpg ~/.terraform.d/plugins/
-#ln -s ~/terraform-credentials-gpg ~/.terraform.d/plugins/
+#ln -s ~/terraform-credentials-gpg/terraform-credentials-gpg ~/.terraform.d/plugins/
 ```
 
 Configure your terraform to use the GPG credential helper:
