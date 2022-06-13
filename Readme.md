@@ -14,6 +14,7 @@ Get a copy of the code:
 ```
 cd ~
 git clone https://github.com/oxplot/terraform-credentials-gpg
+cd terraform-credentials-gpg
 ```
 
 Copy or link to `terraform-credentials-gpg` in your terraform plugins
@@ -21,7 +22,7 @@ directory:
 
 ```
 cp terraform-credentials-gpg ~/.terraform.d/plugins/
-#ln -s ~/terraform-credentials-gpg ~/.terraform.d/plugins/
+#ln -s ~/terraform-credentials-gpg/terraform-credentials-gpg ~/.terraform.d/plugins/
 ```
 
 Configure your terraform to use the GPG credential helper:
@@ -40,6 +41,12 @@ EOF
 address associated with that key.*
 
 *`.terraform-cloud-token` will store gpg encrypted token*
+
+Login to terraform:
+
+```
+terraform login
+```
 
 Setup a new terraform project:
 
@@ -61,8 +68,10 @@ terraform {
 EOF
 ```
 
-Login to terraform:
+Init it:
 
 ```
-terraform login
+terraform init
 ```
+
+above command should pop up the password dialog to decrypt your token file - (or may do so automatically if you have your GPG agent running).
